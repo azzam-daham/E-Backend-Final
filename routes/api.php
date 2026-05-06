@@ -1,9 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\StatisticsController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,7 @@ Route::get('/products/{id}', [ProductController::class, 'show']);
 Route::delete('/products/{id}', [ProductController::class, 'destroy']);
 Route::post('/products', [ProductController::class, 'store']);
 Route::patch('/products/{id}', [ProductController::class, 'update']);
+
+// ------------------------Statistics------------------------------  //
+
+Route::get('/statistics', [StatisticsController::class, 'index']);
