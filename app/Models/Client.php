@@ -14,6 +14,7 @@ class Client extends Model
         'mobile',
         'email',
         'address',
+        'social_medias',
         'photo',
     ];
 }

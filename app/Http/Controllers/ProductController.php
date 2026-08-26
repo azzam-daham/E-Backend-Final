@@ -53,6 +53,8 @@ class ProductController extends Controller
         $product = Product::find($id);
         if ($product){
             $product->update($data);
+        }elseif(!$product){
+            return response()->json(['data' => ['message' => "cannot find this product!"]]);
         }
 
         return ProductResource::make($product);
