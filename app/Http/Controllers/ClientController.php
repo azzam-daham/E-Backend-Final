@@ -32,6 +32,7 @@ class ClientController extends Controller
         if($address){
             $query->where('address', 'like', '%' . $address . '%');
         }
+        $query -> orderBy('id', 'desc');
         $clients = $query->paginate(5);
 
 

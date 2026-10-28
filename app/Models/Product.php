@@ -16,4 +16,8 @@ class Product extends Model
         'discount',
         'discrption',
     ];
+
+    public function ProductPhotos(){
+        return $this->hasMany();
+    }
 }
